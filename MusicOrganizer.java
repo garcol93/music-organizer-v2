@@ -127,4 +127,27 @@ public class MusicOrganizer
             System.out.println("No hay coincidencias");
         }
     }
+
+    /**
+     * localiza el primer archivo que coincida y da su posicion si 
+     * no devuelve -1
+     */
+    public int findFrist(String searchString)
+    {   
+        int index = 0;
+        boolean searching = true;
+        while(searching && index < files.size()){
+            String filename = files.get(index);
+            if(filename.contains(searchString)){
+                searching = false;
+            }
+            else{
+                index++;
+            }            
+        }
+        if (searching = true){
+            index = -1;
+        }
+        return index;
+    }
 }
