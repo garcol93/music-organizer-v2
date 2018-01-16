@@ -100,10 +100,15 @@ public class MusicOrganizer
      */
     public void listMaching(String textoABuscar)
     {
+        boolean noHayCoincidencias=true;
         for(String filename : files) {
             if (filename.contains(textoABuscar)) {  
                 System.out.println(filename);
+                noHayCoincidencias = false;
             }
+        }
+        if (noHayCoincidencias==true){
+        System.out.println("No hay coincidencias");
         }
     }
 }
