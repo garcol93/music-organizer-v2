@@ -135,8 +135,9 @@ public class MusicOrganizer
     public int findFrist(String searchString)
     {   
         int index = 0;
+        int totalFiles = files.size();
         boolean searching = true;
-        while(searching && index < files.size()){
+        while(searching && index < totalFiles){
             String filename = files.get(index);
             if(filename.contains(searchString)){
                 searching = false;
