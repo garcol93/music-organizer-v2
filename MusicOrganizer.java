@@ -108,7 +108,23 @@ public class MusicOrganizer
             }
         }
         if (noHayCoincidencias==true){
-        System.out.println("No hay coincidencias");
+            System.out.println("No hay coincidencias");
+        }
+    }
+
+    /**
+     * reproduce trozos canciones artista buscado
+     */
+    public void muestraArtista(String Artista){
+        boolean noHayCoincidencias=true;
+        for(String filename : files) {
+            if (filename.contains(Artista)) {  
+                player.playSample(filename);
+                noHayCoincidencias = false;
+            }
+        }
+        if (noHayCoincidencias==true){
+            System.out.println("No hay coincidencias");
         }
     }
 }
